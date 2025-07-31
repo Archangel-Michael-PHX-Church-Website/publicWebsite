@@ -1,0 +1,32 @@
+/*.church-drone-video-container {*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*    padding-bottom: 56.25%; !* 16:9 Aspect Ratio *!*/
+/*    height: 0;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.church-drone-video {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover; !* or 'contain' if you want full visibility *!*/
+/*}*/
+
+.church-drone-gif-container {
+    width: 100%;
+    max-width: 100%;     /* prevents it from exceeding screen width */
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.church-drone-gif {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+}

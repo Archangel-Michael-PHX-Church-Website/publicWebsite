@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#4f0222 ;
+    color: #fff;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.brand{
+    display: flex;
+    height: 100%;
+}
+.logo {
+    height: 60px;
+    /*margin: px;*/
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+
+}
+
+.church {
+    flex: 1;
+    padding: 0;
+    margin-top: 5px;
+    align-items: center;
+    flex-wrap: wrap ;
+}
+
+.church_name {
+    display: flex;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+}
+
+
+.toggle-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    height: 80px;
+    padding: 0 1.5rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+}
+
+.nav-item {
+    height: 100%;
+}
+
+.nav-button {
+    background: #4f0222;
+    border: none;
+    color: #86566a;
+    padding: 0 1.5rem;
+    height: 100%;
+    font-size: 18px;
+    font-family: 'EB Garamond', serif;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+    background:linear-gradient(to bottom, rgba(58, 1, 25, 0.78), transparent);
+    color: #ffffff;
+    margin: 0;
+}
+
+.nav-button.selected {
+    background: linear-gradient(to bottom, rgba(58, 1, 25, 0.78), transparent);
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-list.open {
+        display: flex;
+    }
+
+    .nav-button {
+        width: 100%;
+        height: 50px;
+        text-align: left;
+        padding: 0 1rem;
+    }
+}
