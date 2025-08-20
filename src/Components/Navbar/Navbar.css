@@ -15,11 +15,45 @@
 }
 .logo {
     height: 60px;
-    /*margin: px;*/
     margin-left: 10px;
     margin-right: 10px;
     flex: 1;
+}
 
+/* Dropdown base */
+.has-dropdown {
+    position: relative;
+}
+
+/* Dropdown list */
+.dropdown {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #4f0222;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 1000;
+    border-top: 2px solid #ffcc00;
+    list-style: none;
+}
+
+/* Dropdown button */
+.dropdown-button {
+    background: linear-gradient(to bottom, rgba(128, 7, 59, 0.78), transparent);
+    border: none;
+    color: #a6808f;
+    padding: 0.75rem 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.dropdown-button:hover {
+    background:linear-gradient(to bottom, rgba(103, 5, 46, 0.78), transparent);
+    color: #ffffff;
 }
 
 .church {
@@ -107,5 +141,13 @@
         height: 50px;
         text-align: left;
         padding: 0 1rem;
+    }
+    .dropdown {
+        position: static;
+        border-top: none;
+    }
+
+    .dropdown-button {
+        padding-left: 2rem;
     }
 }

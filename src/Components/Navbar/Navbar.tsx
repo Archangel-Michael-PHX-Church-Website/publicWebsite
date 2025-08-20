@@ -6,12 +6,15 @@ import Logo_Img from '../../Assets/Images/Archangel Michael Website Logo.png'
 const ChurchName = "Archangel Michael Coptic Orthodox Church"
 const Navbar: React.FC = () => {
     const [active, setActive] = useState(navItems[0].name);
-    const [isOpen, setIsOpen] = useState(false); // track mobile menu open
+    const [isOpen, setIsOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const handleNavigation = (item: NavItem) => {
-        setActive(item.name);
-        setIsOpen(false); // close menu on select
-        window.location.href = item.href;
+        if (item.href) {
+            window.location.href = item.href;
+            setActive(item.name);
+            setIsOpen(false);
+        }
     };
 
     return (
@@ -32,18 +35,44 @@ const Navbar: React.FC = () => {
             </button>
             <ul className={`nav-list ${isOpen ? 'open' : ''}`}>
                 {navItems.map((item) => (
-                    <li key={item.name} className="nav-item">
+                    <li
+                        key={item.name}
+                        className={`nav-item ${item.submenu ? 'has-dropdown' : ''}`}
+                        onMouseEnter={() => item.submenu && setDropdownOpen(true)}
+                        onMouseLeave={() => item.submenu && setDropdownOpen(false)}
+                        onClick={() => {
+                            if (item.submenu) {
+                                setDropdownOpen(!dropdownOpen);
+                            } else {
+                                handleNavigation(item);
+                            }
+                        }}
+                    >
                         <button
                             className={`nav-button ${active === item.name ? 'selected' : ''}`}
-                            onClick={() => handleNavigation(item)}
                         >
                             {item.name}
                         </button>
+                        {item.submenu && dropdownOpen && (
+                            <ul className="dropdown">
+                                {item.submenu.map((subItem) => (
+                                    <li key={subItem.name} className="dropdown-item">
+                                        <button
+                                            className="dropdown-button"
+                                            onClick={() => handleNavigation(subItem)}
+                                        >
+                                            {subItem.name}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </li>
                 ))}
             </ul>
         </nav>
     );
 };
+
 
 export default Navbar;
