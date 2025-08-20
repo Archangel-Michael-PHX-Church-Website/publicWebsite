@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import "./SlideShow.css";
 
-interface SlideshowProps {
+interface SlideshowBackgroundProps {
     images: string[];
     interval?: number; // milliseconds
 }
 
-const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 3000 }) => {
+const Slideshow: React.FC<SlideshowBackgroundProps> = ({
+                                                                     images,
+                                                                     interval = 5000,
+                                                                 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState<"left" | "right">("right");
-    const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
-        if (isHovered) return;
-
         const timer = setInterval(() => {
             goToNext();
         }, interval);
 
         return () => clearInterval(timer);
-    }, [images.length, interval, isHovered]);
-
-    const goToPrev = () => {
-        setDirection("left");
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-    };
+    }, [images.length, interval]);
 
     const goToNext = () => {
         setDirection("right");
@@ -34,31 +28,25 @@ const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 3000 }) => {
     };
 
     return (
-        <div
-            className="slideshow-container"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
+        <div className="background-slideshow">
             <AnimatePresence initial={false} custom={direction}>
                 <motion.img
                     key={currentIndex}
                     src={images[currentIndex]}
-                    alt={`Slide ${currentIndex + 1}`}
-                    className="slide-image"
-                    custom={direction}
-                    initial={{ x: direction === "right" ? 300 : -300, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: direction === "right" ? -300 : 300, opacity: 0 }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    alt="background slide"
+                    className="background-slide"
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 1.2, ease: "easeInOut" }}
                 />
             </AnimatePresence>
 
-            <button className="arrow-button left" onClick={goToPrev}>
-                <FiChevronLeft size={32} />
-            </button>
-            <button className="arrow-button right" onClick={goToNext}>
-                <FiChevronRight size={32} />
-            </button>
+            {/* Example overlay content */}
+            <div className="overlay-content">
+                <h1>Archangel Michael American Coptic Orthodox Church</h1>
+                <h2>Ⲁⲣⲭⲁⲅⲅⲉⲗ Ⲙⲓⲭⲁⲏⲗ Ⲁⲙⲉⲣⲓⲕⲏⲛⲏ Ⲕⲟⲡⲧⲓⲕⲏ Ⲉⲕⲕⲗⲏⲥⲓ</h2>
+            </div>
         </div>
     );
 };
