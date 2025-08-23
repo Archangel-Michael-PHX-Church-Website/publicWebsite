@@ -7,14 +7,11 @@ const App: React.FC = () => {
     return (
         <div>
             <Navbar />
-            {/*<CurvedHeader/>*/}
             <main>
-                <h1>Archangel Micheal American Coptic Orthodox Church</h1>
                 <HomePage/>
             </main>
-            <div>
-                {/*<Footer/>*/}
-            </div>
+
+                <Footer/>
 
         </div>
     );

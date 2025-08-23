@@ -6,6 +6,21 @@
   height: 40vmin;
   pointer-events: none;
 }
+/* Full-height layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content takes all space above footer */
+.main-content {
+  flex: 1;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

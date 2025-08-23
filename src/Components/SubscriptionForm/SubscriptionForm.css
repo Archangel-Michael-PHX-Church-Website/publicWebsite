@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+.subscription-form {
+    border: 2px solid #ffcc00; /* gold accent */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'EB Garamond', serif;
+    color: #fff;
+}
+
+/* Heading */
+.subscription-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Input Row (two inputs side by side on desktop) */
+.input-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-row input {
+    flex: 1; /* equal width */
+}
+
+/* Input Fields */
+.subscription-form input {
+    border: 1px solid #a6808f;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: 'EB Garamond', serif;
+    background-color: #fff; /* lighter background */
+    color: #4f0222;
+    transition: all 0.3s ease;
+}
+
+.subscription-form input::placeholder {
+    color: #7a5164;
+}
+
+.subscription-form input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.4);
+    outline: none;
+}
+
+/* Submit Button */
+.subscription-form button {
+    background: linear-gradient(to bottom, #fce275, #ffce34);
+    color: #4f0222;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-family: 'EB Garamond', serif;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4);
+    width: 30%;          /* fixed smaller width */
+    display: block;        /* make it block-level */
+    margin: 1rem auto 0;   /* auto centers horizontally */
+    text-align: center;
+}
+
+.subscription-form button:hover {
+    background: linear-gradient(to bottom, #ffcc00, #d4a600);
+}
+
+.subscription-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.subscription-form .error {
+    color: #ffb3b3;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Success Message */
+.subscription-success {
+    background-color: #fff;
+    border: 2px solid #ffcc00;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    color: #4f0222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.subscription-success h2 {
+    color: #4f0222;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-success p {
+    color: #7a5164;
+    font-size: 1rem;
+}
+
+/* 📱 Mobile View: stack inputs */
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column;
+    }
+}
