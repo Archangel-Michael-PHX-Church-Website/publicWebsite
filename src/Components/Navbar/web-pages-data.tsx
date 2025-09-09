@@ -17,8 +17,8 @@ export const navItems: NavItem[] = [
             ]
     },
     {name: 'Bookshop', href: ''},
-    {name: 'Donation', href: ''},
-    {name: 'Contact Us', href: ''}
+    // {name: 'Donation', href: ''},
+    {name: 'Recreation Center ', href: ''}
 ];
 
 // export default navItems;

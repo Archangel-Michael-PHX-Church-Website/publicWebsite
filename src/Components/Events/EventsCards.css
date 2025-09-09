@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* States */
+.loading,
+.no-events,
+.error {
+    text-align: center;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Error color tweak */
+.error {
+    color: #b91c1c;
+}
+
+/* Grid */
+@media (min-width: 640px) {
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 960px) {
+    .card-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Card */
+
+
+/* Grid -> Horizontal row with scroll */
+.card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.card-grid::-webkit-scrollbar-thumb {
+    background: #4f0222;
+    border-radius: 4px;
+}
+
+.card {
+    flex: 0 0 300px; /* fixed width per card */
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+/* Image */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #eee;
+}
+
+.card-footer {
+    background: #fdfdfd;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'EB Garamond', serif;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: #4f0222; /* deep maroon */
+    font-weight: bold;
+    font-family: 'EB Garamond', serif;
+}
+
+.footer-info p {
+    color: #333;
+    font-size: 0.9rem;
+    margin: 2px 0;
+    font-family: 'EB Garamond', serif;
+}
+
+.footer-info p span.label {
+    font-weight: bold;
+    color: #4f0222;
+}
+
+.register-button {
+    padding: 6px 14px;
+    background-color: #4f0222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'EB Garamond', serif;
+    transition: background 0.3s ease;
+    white-space: nowrap; /* prevent wrapping */
+}
+
+.register-button:hover {
+    background-color: #a60d47;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ✅ Modal overlay covers full screen */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* ✅ Content centers image */
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✅ Image fits screen, keeps aspect ratio */
+.modal-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* ensures full image is visible */
+}
+
+
+
+@media (max-width: 768px) {
+    .card-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .card {
+        flex: 0 0 80%; /* cards take 80% of screen width */
+        scroll-snap-align: start;
+    }
+
+    .card-grid::-webkit-scrollbar {
+        display: none; /* hide scrollbar */
+    }
+}
+
+
+
+/* Footer */
+
