@@ -29,14 +29,6 @@
     color: #ff5e57; /* You can customize hover color */
 }
 
-.footer-bottom {
-    margin-top: 30px;
-    border-top: 2px solid #ffcc00;
-    padding-top: 15px;
-    text-align: center;
-    font-size: 14px;
-}
-
 .social-icons a {
     font-size: 28px;
     margin: 0 10px;

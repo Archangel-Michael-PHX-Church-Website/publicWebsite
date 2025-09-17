@@ -32,11 +32,6 @@ const Footer: React.FC = () => {
                         </a>
                     </div>
                 </div>
-
-            </div>
-
-            <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
             </div>
         </footer>
     );
