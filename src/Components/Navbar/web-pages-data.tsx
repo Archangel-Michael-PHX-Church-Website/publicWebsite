@@ -6,19 +6,19 @@ export type NavItem={
 }
 
 export const navItems: NavItem[] = [
-    {name: 'Home', href: ''},
-    {name: 'About Us', href: ''},
-    {name: 'Calendar', href: ''},
+    {name: 'Home', href: '/'},
+    {name: 'About Us', href: '/about'},
+    {name: 'Calendar', href: '/calendar'},
     {name: 'Media',
         submenu: [
-            { name: "Sermons", href: ''},
-            { name: "Bible Study", href: ''},
-            { name: "Articles on Orthodoxy", href: ''},
+            { name: "Sermons", href: '/sermons'},
+            { name: "Bible Study", href: '/bible'},
+            { name: "Articles on Orthodoxy", href: '/articles'},
             ]
     },
-    {name: 'Bookshop', href: ''},
+    {name: 'Bookshop', href: '/bookshop'},
     // {name: 'Donation', href: ''},
-    {name: 'Recreation Center ', href: ''}
+    {name: 'Recreation Center ', href: '/center'}
 ];
 
 // export default navItems;
