@@ -1,0 +1,80 @@
+.youtube-section {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.youtube-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Grid layout: 2 per row on large screens, 1 per row on mobile */
+.youtube-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .youtube-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Individual card */
+.youtube-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.youtube-card:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive video frame (16:9) */
+.youtube-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.youtube-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Text info */
+.youtube-info {
+    padding: 10px 15px;
+}
+
+.youtube-info h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.youtube-info p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Loading and empty states */
+.video-loading,
+.video-empty {
+    text-align: center;
+    color: #666;
+    padding: 40px;
+    font-size: 1rem;
+}
