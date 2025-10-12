@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sec-title {
+    padding-top: 30px;
+    color: #4f0222;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #4e3f30;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #bfae48;
+    justify-self: center;
+    font-size: 24px;
+}
+
+li strong {
+    color: #ffcc00;
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Crimson Pro', serif;
+
+}
+/* Group every 2 .about-sec into a row */
+.about-container > .about-sec {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    /*padding: 20px;*/
+    border-radius: 12px;
+}
+
+/* Text and image inside each .about-sec */
+.about-text {
+    flex: 1;
+    max-width: 100%;
+}
+
+.about-image {
+    flex: 0 0 40%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.inline-image {
+    float: right;
+    margin: 10px 0 10px 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-list li {
+    /*margin-bottom: 40px;*/
+    background-color: #f9f9f9;
+    border-radius: 12px;
+
+}
+
+.about-row {
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.about-row li {
+    flex: 1 1 45%;
+    padding-right: 30px;
+}
+
+.cross-icon {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+
+
+/* Responsive stacking */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-container > .about-sec {
+        flex-direction: column;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-text{
+        max-width: 100%;
+    }
+
+    .about-row {
+        flex-direction: column;
+    }
+    .about-row li {
+        padding-right: 0px;
+    }
+
+    .inline-image {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        width: 100% !important;
+    }
+}

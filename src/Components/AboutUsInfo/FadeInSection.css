@@ -1,0 +1,16 @@
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    padding: 2rem;
+    min-height: 400px;
+    background: #f9fafb;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

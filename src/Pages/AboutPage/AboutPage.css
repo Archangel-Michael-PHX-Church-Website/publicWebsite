@@ -1,0 +1,11 @@
+.about-page {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+.sections {
+    padding-top: 120px;
+}
+.about-page, body, html {
+    overflow: visible;
+}

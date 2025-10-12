@@ -28,8 +28,12 @@
     "jsx": "react", // or "react" for older versions
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true
-  }
+    "strict": true,
+    "lib": ["dom", "esnext"]
+  },
+
+
+
 
 
 }
