@@ -8,6 +8,7 @@ import {CalendarEvent} from './CalendarEnevtsData'
 import {getEventColorClass} from './CalendarEnevtsData'
 import {getEventImage} from './CalendarEnevtsData'
 import './Calendar.css';
+import config from "../../config";
 
 
 const Calendar: React.FC = () => {
@@ -15,7 +16,7 @@ const Calendar: React.FC = () => {
     const [selectedEvent, setSelectedEvent] = useState<any | null>(null);
 
     useEffect(() => {
-        fetch('http://localhost:5107/api/calendar/events')
+        fetch(`${config.API_URL}/calendar/events`)
             .then(res => res.json())
             .then((data: CalendarEvent[]) => {
                 const formatted = data.map(event => ({
