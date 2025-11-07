@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
-import "./Sermons.css"
-import {Video} from "./VidoData"
-import config from "../../config"
+import "./Sermons.css";
+import { Video } from "./VidoData";
+import config from "../../config";
 
-const YoutubePastStreams: React.FC = () => {
+interface YoutubePastStreamsProps {
+    count?: number;
+}
+
+const YoutubePastStreams: React.FC<YoutubePastStreamsProps> = ({ count = 4 }) => {
     const [videos, setVideos] = useState<Video[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchVideos = async () => {
             try {
-                const res = await fetch(`${config.API_URL}/sundayyoutube/latest-completed?count=4`);
+                const res = await fetch(`${config.API_URL}/sundayyoutube/latest-completed?count=${count}`);
                 if (!res.ok) throw new Error("Failed to fetch videos");
                 const data = await res.json();
                 setVideos(data);
@@ -21,17 +25,18 @@ const YoutubePastStreams: React.FC = () => {
             }
         };
         fetchVideos();
-    }, []);
+    }, [count]);
 
     if (loading) return <div className="video-loading">Loading videos...</div>;
     if (videos.length === 0)
         return <div className="video-empty">No recent streams found.</div>;
 
+    const videosToRender = count === 1 ? videos.slice(0, 1) : videos;
+
     return (
         <div className="youtube-section">
-            <h2 className="youtube-title">Sermons</h2>
             <div className="youtube-grid">
-                {videos.map((v) => (
+                {videosToRender.map((v) => (
                     <div key={v.videoId} className="youtube-card">
                         <div className="youtube-frame">
                             <iframe

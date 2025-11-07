@@ -4,7 +4,8 @@ import Slideshow from "../../Components/SlideShow/SlideShow";
 import SubscriptionForm from "../../Components/SubscriptionForm/SubscriptionForm";
 import {EventsCards} from "../../Components/Events/EventsCards";
 import Donation from "../../Components/Donation/Donation";
-// import "./Home.css"
+import YoutubePastStreams from "../../Components/Sermons/Sermons";
+import "./HomePage.css"
 
 const HomePage : React.FC = () =>{
 
@@ -16,6 +17,10 @@ const HomePage : React.FC = () =>{
                 </div>
                 <div className="subscription">
                     <SubscriptionForm />
+                </div>
+                <div className="Current-week" >
+                    <h2 className="youtube-title">Current Week Service</h2>
+                    < YoutubePastStreams count={1}/>
                 </div>
                 <div className="min-h-screen bg-gray-100">
                     <EventsCards/>
