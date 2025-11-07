@@ -29,6 +29,7 @@ const YoutubePastStreams: React.FC = () => {
 
     return (
         <div className="youtube-section">
+            <h2 className="youtube-title">Sermons</h2>
             <div className="youtube-grid">
                 {videos.map((v) => (
                     <div key={v.videoId} className="youtube-card">
