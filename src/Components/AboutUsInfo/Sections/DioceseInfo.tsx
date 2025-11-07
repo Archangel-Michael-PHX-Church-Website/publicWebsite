@@ -1,8 +1,8 @@
 // Diocese.tsx
 import React from "react";
 import Section from '../Section';
-import Map from "../../../Assets/Images/Map.png"
-import Cross from "../../../Assets/Images/cross.png"
+import Map from "../../../Assets/Images/AboutUs/Map.png"
+import Cross from "../../../Assets/Images/AboutUs/cross.png"
 
 const Diocese: React.FC = () => (
     <Section id="diocese" title="Diocese of Southern USA">

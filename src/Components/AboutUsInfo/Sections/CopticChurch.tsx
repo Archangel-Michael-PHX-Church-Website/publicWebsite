@@ -1,20 +1,20 @@
 import React from 'react';
 import Section from '../Section';
-import EarlyChurch from '../../../Assets/Images/earlyChurch.jpg'
-import StMark from '../../../Assets/Images/StMark.jpeg'
-import Church from '../../../Assets/Images/copticChurch.jpg'
-import Trinity from '../../../Assets/Images/Trinity.jpg'
-import Clement from "../../../Assets/Images/Saint_Clement.png"
-import Origen from "../../../Assets/Images/Origen.jpg"
-import Mina from "../../../Assets/Images/stMina.jpg"
-import Rebecca from "../../../Assets/Images/stRebeaca.jpg"
-import Demiana from "../../../Assets/Images/Demiana .jpg"
-import Anthony from "../../../Assets/Images/st-anthony.jpg"
-import Athanasius from "../../../Assets/Images/stathanasius.jpg"
-import Pachomius from "../../../Assets/Images/pachomius.jpg"
-import Cyril from "../../../Assets/Images/stCyril.jpg"
-import Mary from "../../../Assets/Images/St-Mary-of-Egypt.jpeg"
-import Moses from "../../../Assets/Images/StMoses.jpeg"
+import EarlyChurch from '../../../Assets/Images/AboutUs/earlyChurch.jpg'
+import StMark from '../../../Assets/Images/AboutUs/StMark.jpeg'
+import Church from '../../../Assets/Images/AboutUs/copticChurch.jpg'
+import Trinity from '../../../Assets/Images/AboutUs/Trinity.jpg'
+import Clement from "../../../Assets/Images/AboutUs/Saint_Clement.png"
+import Origen from "../../../Assets/Images/AboutUs/Origen.jpg"
+import Mina from "../../../Assets/Images/AboutUs/stMina.jpg"
+import Rebecca from "../../../Assets/Images/AboutUs/stRebeaca.jpg"
+import Demiana from "../../../Assets/Images/AboutUs/Demiana .jpg"
+import Anthony from "../../../Assets/Images/AboutUs/st-anthony.jpg"
+import Athanasius from "../../../Assets/Images/AboutUs/stathanasius.jpg"
+import Pachomius from "../../../Assets/Images/AboutUs/pachomius.jpg"
+import Cyril from "../../../Assets/Images/AboutUs/stCyril.jpg"
+import Mary from "../../../Assets/Images/AboutUs/St-Mary-of-Egypt.jpeg"
+import Moses from "../../../Assets/Images/AboutUs/StMoses.jpeg"
 
 
 const CopticChurch: React.FC = () => (

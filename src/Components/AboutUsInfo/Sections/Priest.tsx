@@ -1,7 +1,7 @@
 // Priest.tsx
 import React from "react";
 import Section from "../Section";
-import PriestImg from "../../../Assets/Images/priest.png";
+import PriestImg from "../../../Assets/Images/AboutUs/priest.png";
 
 const Priest: React.FC = () => (
     <Section id="priest" title="Clergy at Archangel Michael">
