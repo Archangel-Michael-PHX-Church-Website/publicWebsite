@@ -35,7 +35,7 @@ const YoutubePastStreams: React.FC<YoutubePastStreamsProps> = ({ count = 4 }) =>
 
     return (
         <div className="youtube-section">
-            <div className="youtube-grid">
+            <div className={`youtube-grid ${count === 1 ? "single-video" : "multi-video"}`}>
                 {videosToRender.map((v) => (
                     <div key={v.videoId} className="youtube-card">
                         <div className="youtube-frame">

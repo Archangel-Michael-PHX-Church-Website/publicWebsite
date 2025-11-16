@@ -1,28 +1,68 @@
 .youtube-section {
     text-align: center;
     padding: 20px;
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .youtube-title {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     color: #222;
     margin-bottom: 2rem;
     text-align: center;
 }
 
-/* Grid layout: 2 per row on large screens, 1 per row on mobile */
+/* Default grid layout: 1 per row on mobile */
 .youtube-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 70px;
+    justify-content: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+    .youtube-grid {
+        margin: 0; /* No margin on desktop */
+    }
+}
+
+
+/* Multi-video layout (count = 4): 2 per row on large screens */
+.multi-video {
+    grid-template-columns: 1fr;
 }
 
 @media screen and (min-width: 768px) {
-    .youtube-grid {
+    .multi-video {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .youtube-title {
+        font-size: 60px;
+    }
+}
+
+/* Single-video layout (count = 1): full width on mobile, half width on desktop */
+.single-video {
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.single-video .youtube-card {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .single-video .youtube-card {
+        margin: 0 auto;
     }
 }
 
