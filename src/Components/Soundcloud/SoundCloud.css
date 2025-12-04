@@ -1,0 +1,49 @@
+.soundcloud-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.soundcloud-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*.soundcloud-item {*/
+/*    display: flex;           !* put iframe + text side by side *!*/
+/*    align-items: flex-start;*/
+/*    gap: 1rem;*/
+/*}*/
+
+.soundcloud-item iframe {
+    /*width: 200px !important;   !* shrink width *!*/
+    height: 200px !important;  /* shrink height */
+    /*flex-shrink: 0;            !* prevent shrinking further *!*/
+}
+
+/*.soundcloud-item .soundcloud-info {*/
+/*    flex: 1;                   !* text takes remaining space *!*/
+/*}*/
+
+
+
+.soundcloud-item.track {
+    border-left: 6px solid rgba(103, 5, 46, 0.78);
+}
+
+.soundcloud-item.playlist {
+    border-left: 6px solid rgba(255, 204, 0, 0.51);
+
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.soundcloud-item.playlist iframe {
+    height: 400px !important;
+}

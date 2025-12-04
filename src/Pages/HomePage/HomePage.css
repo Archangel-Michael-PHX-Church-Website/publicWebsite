@@ -1,4 +1,43 @@
-.Current-week {
-    text-align: center;
-    /*overflow-x: hidden;*/
+.Current-week-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* smaller gap for stacked layout */
+}
+
+/* Responsive layout for larger screens */
+@media screen and (min-width: 768px) {
+    .Current-week-content {
+        flex-direction: row;
+        /*gap: 1rem; !* reduce horizontal gap *!*/
+    }
+
+    .Current-week-column {
+        flex: 1;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .youtube-section,
+    .soundcloud-wrapper {
+        margin: 0;
+        padding: 0;
+    }
+
+    iframe,
+    .soundcloud-card iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.youtube-section,
+.soundcloud-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.soundcloud-item.track iframe {
+    height: 280px !important;
 }
