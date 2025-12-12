@@ -1,5 +1,6 @@
 import React from 'react';
-import './AllArticles.css'; // Global CSS import
+import './AllArticles.css';
+import GoToTop from "../Support/GoToTop"; // Global CSS import
 
 const Eucharist = () => {
     return (
@@ -83,6 +84,7 @@ const Eucharist = () => {
                     Jakob Puckett is a reader in the Coptic Orthodox Church.
                 </p>
             </section>
+            <GoToTop/>
         </article>
     );
 };

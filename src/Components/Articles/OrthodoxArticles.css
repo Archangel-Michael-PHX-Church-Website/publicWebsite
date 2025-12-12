@@ -59,3 +59,17 @@
 .card-btn:hover {
     opacity: 0.85;
 }
+
+@media screen and (min-width: 768px) {
+    .articles-title {
+        font-size: 60px;
+    }
+}
+
+.articles-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 2rem;
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './AllArticles.css'
+import GoToTop from "../Support/GoToTop";
 
 const Sacraments = () => {
     return (
@@ -95,6 +96,7 @@ const Sacraments = () => {
                     Jakob Puckett is a reader in the Coptic Orthodox Church.
                 </p>
             </section>
+            <GoToTop/>
         </article>
     );
 };
