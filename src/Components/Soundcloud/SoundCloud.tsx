@@ -10,6 +10,8 @@ type Props = {
 const SoundCloudTracks: React.FC<Props> = ({ count }) => {
     const [tracks, setTracks] = useState<SoundCloudItem[]>([]);
     const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         const fetchTracks = async () => {
@@ -21,11 +23,14 @@ const SoundCloudTracks: React.FC<Props> = ({ count }) => {
             } catch (err) {
                 setError('Failed to load SoundCloud tracks.');
                 console.error(err);
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchTracks();
     }, [count]);
+    if (loading) return <div className="track-loading">Loading Tracks...</div>;
 
     return (
         <div className="soundcloud-container">
