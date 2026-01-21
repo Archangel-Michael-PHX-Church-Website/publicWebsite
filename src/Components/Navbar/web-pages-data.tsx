@@ -17,7 +17,6 @@ export const navItems: NavItem[] = [
             ]
     },
     {name: 'Bookshop', href: '/bookshop'},
-    // {name: 'Donation', href: ''},
     {name: 'Recreation Center ', href: '/center'}
 ];
 
