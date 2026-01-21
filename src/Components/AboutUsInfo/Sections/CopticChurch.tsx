@@ -4,8 +4,8 @@ import EarlyChurch from '../../../Assets/Images/AboutUs/earlyChurch.jpg'
 import StMark from '../../../Assets/Images/AboutUs/StMark.jpeg'
 import Church from '../../../Assets/Images/AboutUs/copticChurch.jpg'
 import Trinity from '../../../Assets/Images/AboutUs/Trinity.jpg'
-import Clement from "../../../Assets/Images/AboutUs/Saint_Clement.png"
-import Origen from "../../../Assets/Images/AboutUs/Origen.jpg"
+import Clement from "../../../Assets/Images/AboutUs/Saint_Clement.jpg"
+import Origen from "../../../Assets/Images/AboutUs/Origen.png"
 import Mina from "../../../Assets/Images/AboutUs/stMina.jpg"
 import Rebecca from "../../../Assets/Images/AboutUs/stRebeaca.jpg"
 import Demiana from "../../../Assets/Images/AboutUs/Demiana .jpg"
@@ -14,7 +14,7 @@ import Athanasius from "../../../Assets/Images/AboutUs/stathanasius.jpg"
 import Pachomius from "../../../Assets/Images/AboutUs/pachomius.jpg"
 import Cyril from "../../../Assets/Images/AboutUs/stCyril.jpg"
 import Mary from "../../../Assets/Images/AboutUs/St-Mary-of-Egypt.jpeg"
-import Moses from "../../../Assets/Images/AboutUs/StMoses.jpeg"
+import Moses from "../../../Assets/Images/AboutUs/StMoses.jpg"
 
 
 const CopticChurch: React.FC = () => (
@@ -66,7 +66,8 @@ const CopticChurch: React.FC = () => (
                         Following the Arab conquest of Egypt in the seventh century, the Arabic term <em>qibt</em> was
                         used to refer to both Egyptians and Christians, reflecting the deep connection between faith and identity.
                         <br/>
-                        The term <em>“Orthodox”</em> signifies the Church’s commitment to preserving the “Original Faith,”
+                        The term <em>“Orthodox”</em>, meaning "straight teaching" signifies the Church’s commitment to
+                        preserving the “The Faith which was once for all  delivered to the saints. (Jude 3)”,
                         steadfastly defending the ancient Christian creed against challenges throughout history.
                     </p>
                 </div>
@@ -84,8 +85,8 @@ const CopticChurch: React.FC = () => (
                         Only-Begotten Son, one in essence with the Father, is the sole Savior of humanity.
                         <br/>
                         As Miaphysites, we affirm the One composite Nature of Christ, fully divine and fully human,
-                        without mingling, without confusion, without alteration. The Coptic Church upholds the One
-                        Incarnate Nature of the Logos, a doctrine carefully preserved through centuries of worship and
+                        without mingling, without confusion, without alteration. The Coptic Orthodox Church, part of the Oriental Orthodox family,
+                        upholds the One Incarnate Nature of the Logos, a doctrine carefully preserved through centuries of worship and
                         teaching.
                     </p>
                 </div>
@@ -110,59 +111,59 @@ const CopticChurch: React.FC = () => (
                         <div className="about-row">
                             <li>
                                 <strong>Clement of Alexandria</strong> (c. 150–215 A.D.)
-                                <p>
+                                <p style={{height: "35px"}}>
                                     Head of the Catechetical School of Alexandria, a philosopher-theologian who integrated
                                     Greek thought with Christian doctrine in works like <em>Stromata</em>, influencing early
                                     Coptic intellectual tradition.
-                                    <img src={Clement} alt="St. Clement of Alexandria" className="inline-image" />
                                 </p>
+                                <img src={Clement} alt="St. Clement of Alexandria" className="inline-image" />
                             </li>
                             <li>
                                 <strong>Origen</strong> (c. 185–253 A.D.)
-                                <p>
+                                <p style={{height: "35px"}}>
                                     Prolific scholar and theologian from Alexandria, known for biblical exegesis, asceticism,
                                     and works like <em>On First Principles</em>. Despite later controversies, his teachings
                                     shaped Coptic theology and the Catechetical School.
-                                    <img src={Origen} alt="Origen" className="inline-image" />
                                 </p>
+                                <img src={Origen} alt="Origen" className="inline-image" />
                             </li>
                         </div>
                         <div className="about-row">
                             <li>
                                 <strong>St. Mina the Wonderworker</strong> (c. 285–309 A.D.)
-                                <p>
+                                <p style={{height: "100px"}}>
                                     A revered martyr under Emperor Diocletian, known for miracles; his shrine near Alexandria
-                                    became a major pilgrimage site, reflecting early Coptic devotion.
-                                    <img src={Mina} alt="St. Mina the Wonderworker" className="inline-image" />
+                                    became a major pilgrimage site, reflecting early Coptic devotion.<br/> <br/> <br/> <br/>
                                 </p>
+                                <img src={Mina} alt="St. Mina the Wonderworker" className="inline-image" />
                             </li>
                             <li>
                                 <strong>St. Demiana </strong>(c. 304)
-                                <p>
+                                <p style={{height: "100px"}}>
                                     <strong>Significance:</strong> A martyr and founder of early Coptic monasticism for women,
                                     St. Demiana was a noblewoman who established a community of virgins in the Delta region
                                     of Egypt. She and her companions were martyred under Emperor Diocletian for their faith.
                                     Her monastery became a model for female her story in the Coptic
                                     Synaxarion inspires devotion.
-                                    asceticism, and <img src={Demiana} alt="St. Demiana" className="inline-image" />
                                 </p>
+                                <img src={Demiana} alt="St. Demiana" className="inline-image" />
                             </li>
                             <li>
                                 <strong>St. Rebecca and Her Five Children </strong>(c. 305)
-                                <p>
+                                <p style={{height: "100px"}}>
                                     <strong>Significance:</strong> A martyr whose unwavering faith led to her and her five
                                     children’s martyrdom during the Diocletian persecution (c. 304–313 A.D.). Her courage in
                                     the face of persecution, as Coptic Synaxarion, exemplifies maternal
                                     strength and devotion to Christ, making her a beloved recorded in the figure in Coptic
                                     five children spirituality. Her were martyred in front of her.
-                                    <img src={Rebecca} alt="St. Rebecca and Her Five Children" className="inline-image" />
                                 </p>
+                                <img src={Rebecca} alt="St. Rebecca and Her Five Children" className="inline-image" />
                             </li>
                         </div>
                     </ul>
 
                     <h3>Nicene, Post-Nicene (325–451 A.D.)</h3>
-                    <p>
+                    <p style={{height: "30px"}}>
                         Following the Council of Nicaea, this era focused Christology, developing on defending orthodox
                         monasticism, and theological refinement amid heresies.
                     </p>
@@ -171,58 +172,57 @@ const CopticChurch: React.FC = () => (
                         <div className="about-row">
                             <li>
                                 <strong>St. Anthony the Great </strong>(c. 251–356 A.D.)
-                                <p>"The Father of Monasticism", who pioneered desert asceticism; his life, documented by
+                                <p style={{height: "40px"}}>
+                                    "The Father of Monasticism", who pioneered desert asceticism; his life, documented by
                                     St. Athanasius, inspired Coptic and global monastic movements.
-                                    <img src={Anthony} alt="St. Anthony the Great" className="inline-image" />
                                 </p>
+                                <img src={Anthony} alt="St. Anthony the Great" className="inline-image" />
                             </li>
                             <li>
                                 <strong>St. Athanasius the Apostolic </strong>(c. 296–373 A.D.)
-                                <p>
+                                <p style={{height: "40px"}}>
                                     The 20th Pope of Alexandria, defender of Christ's divinity at the Council of Nicaea
                                     (325 A.D.), and author of <em>On the Incarnation</em>; known as the "Father of
                                     Orthodoxy."
-                                    <img src={Athanasius} alt="St. Athanasius the Apostolic" className="inline-image" />
-
                                 </p>
+                                <img src={Athanasius} alt="St. Athanasius the Apostolic" className="inline-image" />
                             </li>
                             <li>
                                 <strong>St. Pachomius the Great </strong>(c. 292–346 A.D.)
-                                <p>
+                                <p style={{height: "40px"}}>
                                     Founder of cenobitic (communal) monasticism in Upper Egypt, establishing rules that
                                     structured Coptic monastic life.
-                                    <img src={Pachomius} alt="St. Pachomius the Great" className="inline-image" />
                                 </p>
+                                <img src={Pachomius} alt="St. Pachomius the Great" className="inline-image" />
                             </li>
                         </div>
                         <div className="about-row">
                             <li>
                                 <strong>St. Moses the Strong </strong>(c. 330–405 A.D.)
-                                <p>
+                                <p style={{height: "100px"}}>
                                     A former robber turned desert father, known for repentance, humility, and martyrdom;
                                     his story exemplifies transformative Coptic spirituality.
-                                    <img src={Moses} alt="St. Moses the Strong" className="inline-image" />
-
                                 </p>
+                                <img src={Moses} alt="St. Moses the Strong" className="inline-image" />
                             </li>
                             <li>
                                 <strong>St. Cyril of Alexandria, the Pillar of Faith</strong> (c. 376–444 A.D)
-                                <p>
+                                <p style={{height: "80px"}}>
                                     The 24th Pope of Alexandria, who defended the Miaphysite doctrine at the Council of
                                     Ephesus (431 A.D.), emphasizing Christ's united divine-human nature.
-                                    <img src={Cyril} alt="St. Cyril of Alexandria" className="inline-image" />
                                 </p>
+                                <img src={Cyril} alt="St. Cyril of Alexandria" className="inline-image" />
                             </li>
                             <li>
                                 <strong>St. Mary of Egypt</strong> (c. 344–421 A.D.)
-                                <p>
+                                <p style={{height: "100px"}}>
                                     <strong>Significance:</strong> A desert ascetic and repentant sinner of extreme
                                     penance in the Egyptian who lived a life desert. Her story, recorded by St. Zosimas
                                     and venerated in Coptic tradition, showcases transformative repentance and ascetic
                                     spirituality. Though shared with other Orthodox traditions, her Egyptian connection
                                     ties her to Coptic heritage.
-                                    <img src={Mary} alt="St. Mary of Egypt" className="inline-image" />
                                 </p>
+                                <img src={Mary} alt="St. Mary of Egypt" className="inline-image" />
                             </li>
                         </div>
                     </ul>

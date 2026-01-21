@@ -103,8 +103,10 @@ p {
 }
 
 
+
+
 /* Responsive stacking */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .about-container {
         flex-direction: column;
         gap: 20px;
@@ -133,4 +135,8 @@ p {
         margin: 20px auto;
         width: 100% !important;
     }
+
+   .about-row li p {
+       height: auto !important;
+   }
 }
