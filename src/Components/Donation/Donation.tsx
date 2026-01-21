@@ -59,7 +59,7 @@ export default function Donation() {
                 </a>
             </div>
 
-            <p className="donation-verse"></p>
+            <p className="donation-verse"> Donation Cheques can also be mailed to 13221 N. 34th st., Phoenix, AZ, 85032.</p>
         </div>
     );
 }
