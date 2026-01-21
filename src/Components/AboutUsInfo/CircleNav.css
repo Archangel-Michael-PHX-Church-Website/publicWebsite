@@ -1,56 +1,113 @@
+/* === Premium Frosted + Neumorphic Bar === */
 .circles-row {
-    position: sticky;       /* keeps it fixed while scrolling */
-    top: 0;                 /* sticks to the top of the page */
-    z-index: 50;            /* ensures it stays above content */
-    background: white;      /* give it a background so content doesn't overlap */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+    /* Frosted glass layer */
+    background: rgba(240, 242, 245, 0.45);
+    backdrop-filter: blur(10px) saturate(110%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+
     padding: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    margin: 0;              /* remove vertical margin so it fits snugly */
+    gap: 1.7rem;
     flex-wrap: wrap;
-    /*border-bottom: 2px solid #e5e7eb; !* subtle border line *!*/
+
+    /* Soft border + subtle glow */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow:
+            0 4px 16px rgba(0, 0, 0, 0.08),
+            inset 0 0 10px rgba(255, 255, 255, 0.45);
+
+    /* Slight inner gradient for depth */
+    background-image: linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.5),
+            rgba(240,240,240,0.35)
+    );
 }
 
+
+/* === Premium Neumorphic Glass Circles === */
 .circle {
     width: 7rem;
     height: 7rem;
+
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+
     border-radius: 50%;
-    background: linear-gradient(90deg, rgba(255, 204, 0, 0.51), rgb(250, 232, 180));
-    color: rgba(128, 7, 59, 0.78);
+
+    /* Soft elevated neuomorphic style */
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px) brightness(1.1);
+    -webkit-backdrop-filter: blur(12px) brightness(1.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    box-shadow:
+            8px 8px 18px rgba(0, 0, 0, 0.12),
+            -8px -8px 18px rgba(255, 255, 255, 0.9),
+            inset 0 0 12px rgba(255, 255, 255, 0.3);
+
+    color: #4b4b4b;
     font-weight: 600;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 0.25rem;
+    letter-spacing: 0.4px;
+
+    transition:
+            transform 0.35s ease,
+            box-shadow 0.35s ease,
+            background 0.3s ease;
+
     cursor: pointer;
-    border: none;
+    text-align: center;
     outline: none;
+    border: none;
 }
 
+
+/* === Hover: Lift + Glass Shine === */
 .circle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    transform: translateY(-6px) scale(1.07);
+
+    background: rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+            12px 12px 25px rgba(0, 0, 0, 0.16),
+            -12px -12px 25px rgba(255, 255, 255, 1),
+            inset 0 0 18px rgba(255, 255, 255, 0.5);
 }
 
+
+/* === Press: Inset Soft Press === */
+.circle:active {
+    transform: scale(0.96);
+    box-shadow:
+            inset 6px 6px 14px rgba(0, 0, 0, 0.18),
+            inset -6px -6px 14px rgba(255, 255, 255, 0.85);
+}
+
+
+/* === Text === */
 .circle-text {
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #4f0222;
 }
 
-/* Small screens */
+
+/* === Mobile === */
 @media (max-width: 600px) {
     .circle {
-        width: 4rem;
-        height: 4rem;
+        width: 4.7rem;
+        height: 4.7rem;
     }
+
     .circle-text {
         font-size: 10px;
     }
 }
-
-
-
