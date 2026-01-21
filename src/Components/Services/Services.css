@@ -1,0 +1,169 @@
+/* =========================
+   CAROUSEL WRAPPER
+========================= */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* =========================
+   CAROUSEL CONTAINER
+========================= */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+    padding: 20px 40px;
+    scroll-behavior: smooth;
+
+    white-space: nowrap; /* needed for horizontal scrolling */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* =========================
+   ARROWS
+========================= */
+.arrow {
+    position: absolute;
+    z-index: 10;
+    font-size: clamp(18px, 3vw, 28px);
+    background: rgba(255, 255, 255, 0.22);
+    border: none;
+    padding: clamp(6px, 1.5vw, 12px);
+    cursor: pointer;
+    border-radius: 50%;
+    backdrop-filter: blur(6px);
+    transition: background 0.2s ease;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* =========================
+   FLIP CARD
+========================= */
+.flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 auto;
+
+    /* Responsive sizing */
+    width: clamp(160px, 22vw, 280px);
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* =========================
+   FRONT / BACK
+========================= */
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+/* FRONT IMAGE */
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* BACK IMAGE */
+.flip-back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================
+   BACK OVERLAY
+========================= */
+.back-overlay {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: rgba(44, 44, 44, 0.4);
+    backdrop-filter: blur(5px) saturate(160%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    padding: clamp(14px, 4vw, 28px);
+    min-width: 0;
+}
+
+/* =========================
+   TEXT (NO OVERFLOW GUARANTEED)
+========================= */
+.back-overlay p {
+    white-space: normal;      /* overrides carousel nowrap */
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(13px, 2.5vw, 17px);
+    line-height: 1.25;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+/* =========================
+   MOBILE TWEAKS
+========================= */
+@media (max-width: 480px) {
+    .carousel-container {
+        padding: 12px 30px;
+        gap: 14px;
+    }
+
+    .back-overlay p {
+        -webkit-line-clamp: 3;
+    }
+}
