@@ -102,6 +102,11 @@ p {
     padding-right: 10px;
 }
 
+section {
+    padding-top: 120px;
+    margin-top: -120px;
+}
+
 
 
 
@@ -139,4 +144,10 @@ p {
    .about-row li p {
        height: auto !important;
    }
+
+    section {
+        padding-top: 200px;
+        margin-top: -200px;
+    }
+
 }
