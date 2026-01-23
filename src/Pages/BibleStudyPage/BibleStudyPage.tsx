@@ -6,7 +6,7 @@ const BibleStudyPage : React.FC = () =>{
     return (
         <div style={{ padding: "20px" }}>
             <h2 className="soundcloud-title">Bible Study</h2>
-            <SoundCloudTracks count={5} />
+            <SoundCloudTracks />
         </div>
     );
 }

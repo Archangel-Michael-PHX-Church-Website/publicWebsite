@@ -8,6 +8,7 @@ import YoutubePastStreams from "../../Components/Sermons/Sermons";
 import SoundCloudTracks from "../../Components/Soundcloud/SoundCloud";
 
 import "./HomePage.css"
+import Services from "../../Components/Services/Services";
 
 const HomePage : React.FC = () =>{
 
@@ -21,16 +22,21 @@ const HomePage : React.FC = () =>{
                     <SubscriptionForm />
                 </div>
                 <div className="Current-week">
-                    <h2 className="youtube-title">Current Week Service</h2>
+                    <h2 className="youtube-title"><span style={{color:"#86566a"}}> LIVE</span> This week</h2>
                     <div className="Current-week-content">
                         <div className="Current-week-column">
                             <YoutubePastStreams count={1} />
                         </div>
                         <div className="Current-week-column">
-                            <SoundCloudTracks count={1} />
+                            <SoundCloudTracks filterType="Track" />
                         </div>
                     </div>
                 </div>
+                <div className="Current-week">
+                    <h2 className="youtube-title">Church Ministries</h2>
+                    <Services/>
+                </div>
+
                 <div className="min-h-screen bg-gray-100">
                     <EventsCards/>
                 </div>
