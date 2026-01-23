@@ -16,6 +16,7 @@ import Priesthood from "./Components/Articles/Priesthood";
 import Sacraments from "./Components/Articles/Sacraments"
 import Traditions from "./Components/Articles/Traditions";
 import ScrollToTop from "./Components/Support/ScrollToTop";
+import UnderConstruction from "./Components/Support/UnderConstruction";
 
 
 
@@ -31,6 +32,8 @@ const App: React.FC = () => {
                 <Route path="/sermons" element={<SermonsPage/>}/>
                 <Route path="/articles" element={<ArticlesPage/>}/>
                 <Route path="/bible" element={<BibleStudyPage/>}/>
+                <Route path="/bookshop" element={<UnderConstruction/>}/>
+                <Route path="/center" element={<UnderConstruction/>}/>
 
                 <Route path="/Intercession" element={<Intercession/>}/>
                 <Route path="/Icons" element={<Icons/>}/>

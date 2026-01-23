@@ -1,0 +1,27 @@
+.uc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.uc-content {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.uc-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.uc-text {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
