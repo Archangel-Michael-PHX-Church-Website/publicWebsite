@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../Section';
-import EarlyChurch from '../../../Assets/Images/AboutUs/earlyChurch.jpg'
+import EarlyChurch from '../../../Assets/Images/AboutUs/earlyChurch.png'
 import StMark from '../../../Assets/Images/AboutUs/StMark.png'
 import Church from '../../../Assets/Images/AboutUs/copticChurch.png'
 import Trinity from '../../../Assets/Images/AboutUs/Trinity.png'
@@ -14,7 +14,7 @@ import Athanasius from "../../../Assets/Images/AboutUs/stathanasius.png"
 import Pachomius from "../../../Assets/Images/AboutUs/pachomius.png"
 import Cyril from "../../../Assets/Images/AboutUs/stCyril.png"
 import Mary from "../../../Assets/Images/AboutUs/St-Mary-of-Egypt.png"
-import Moses from "../../../Assets/Images/AboutUs/StMoses.png"
+import Moses from "../../../Assets/Images/AboutUs/St-Moses.png"
 
 
 const CopticChurch: React.FC = () => (
@@ -24,10 +24,11 @@ const CopticChurch: React.FC = () => (
             <div className="about-sec">
                 <div className="about-text">
                     <h2>About the Coptic Orthodox Church</h2>
+                    <img src={EarlyChurch} alt="Early Church"  className="inline-image" style={{width:"30%"}}/>
+
                     <p>
                         The theology of the Coptic Orthodox Church is rooted solely in Holy Scripture, while its doctrines align
                         fully with the traditions of the Early Church.
-                        <img src={EarlyChurch} alt="Early Church"  className="inline-image" style={{width:"30%"}}/>
                         These traditions reflect the authentic interpretation and application of the teachings of our
                         Lord Jesus Christ and His Apostles, as understood and practiced by Christians and Church leaders
                         during the period of the One Universal Church, prior to the division in 451 A.D.
