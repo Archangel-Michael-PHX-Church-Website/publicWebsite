@@ -1,20 +1,20 @@
 import React from 'react';
 import Section from '../Section';
 import EarlyChurch from '../../../Assets/Images/AboutUs/earlyChurch.jpg'
-import StMark from '../../../Assets/Images/AboutUs/StMark.jpeg'
-import Church from '../../../Assets/Images/AboutUs/copticChurch.jpg'
-import Trinity from '../../../Assets/Images/AboutUs/Trinity.jpg'
-import Clement from "../../../Assets/Images/AboutUs/Saint_Clement.jpg"
+import StMark from '../../../Assets/Images/AboutUs/StMark.png'
+import Church from '../../../Assets/Images/AboutUs/copticChurch.png'
+import Trinity from '../../../Assets/Images/AboutUs/Trinity.png'
+import Clement from "../../../Assets/Images/AboutUs/Saint_Clement.png"
 import Origen from "../../../Assets/Images/AboutUs/Origen.png"
-import Mina from "../../../Assets/Images/AboutUs/stMina.jpg"
-import Rebecca from "../../../Assets/Images/AboutUs/stRebeaca.jpg"
-import Demiana from "../../../Assets/Images/AboutUs/Demiana .jpg"
-import Anthony from "../../../Assets/Images/AboutUs/st-anthony.jpg"
-import Athanasius from "../../../Assets/Images/AboutUs/stathanasius.jpg"
-import Pachomius from "../../../Assets/Images/AboutUs/pachomius.jpg"
-import Cyril from "../../../Assets/Images/AboutUs/stCyril.jpg"
-import Mary from "../../../Assets/Images/AboutUs/St-Mary-of-Egypt.jpeg"
-import Moses from "../../../Assets/Images/AboutUs/StMoses.jpg"
+import Mina from "../../../Assets/Images/AboutUs/stMina.png"
+import Rebecca from "../../../Assets/Images/AboutUs/stRebeaca.png"
+import Demiana from "../../../Assets/Images/AboutUs/Demiana.png"
+import Anthony from "../../../Assets/Images/AboutUs/st-anthony.png"
+import Athanasius from "../../../Assets/Images/AboutUs/stathanasius.png"
+import Pachomius from "../../../Assets/Images/AboutUs/pachomius.png"
+import Cyril from "../../../Assets/Images/AboutUs/stCyril.png"
+import Mary from "../../../Assets/Images/AboutUs/St-Mary-of-Egypt.png"
+import Moses from "../../../Assets/Images/AboutUs/StMoses.png"
 
 
 const CopticChurch: React.FC = () => (
@@ -27,7 +27,7 @@ const CopticChurch: React.FC = () => (
                     <p>
                         The theology of the Coptic Orthodox Church is rooted solely in Holy Scripture, while its doctrines align
                         fully with the traditions of the Early Church.
-                        <img src={EarlyChurch} alt="Early Church"  className="inline-image" style={{width:"50%"}}/>
+                        <img src={EarlyChurch} alt="Early Church"  className="inline-image" style={{width:"30%"}}/>
                         These traditions reflect the authentic interpretation and application of the teachings of our
                         Lord Jesus Christ and His Apostles, as understood and practiced by Christians and Church leaders
                         during the period of the One Universal Church, prior to the division in 451 A.D.
@@ -36,16 +36,13 @@ const CopticChurch: React.FC = () => (
                         —Bishop Athanasius of Ben-Swef and Bahnassa (1977)
                     </blockquote>
                 </div>
-                {/*<div className="about-image">*/}
-                {/*    <img src={EarlyChurch} alt="Early Church" />*/}
-                {/*</div>*/}
             </div>
 
             <div className="about-sec">
                 <div className="about-text">
                     <h2>History and Foundation</h2>
                     <p>
-                        <img src={StMark} alt="St. Mark"  className="inline-image" style={{width:"50%"}}/>
+                        <img src={StMark} alt="St. Mark"  className="inline-image" style={{width:"30%"}}/>
                         Founded in the name of the Lord Jesus Christ by St. Mark the Evangelist in Alexandria around 43
                         A.D., the Coptic Orthodox Church stands as one of the oldest Christian communities in the world.
                         The Church adheres steadfastly to the Nicene Creed, a cornerstone of Christian orthodoxy.
@@ -60,8 +57,8 @@ const CopticChurch: React.FC = () => (
             <div className="about-sec">
                 <div className="about-text">
                     <h2>Meaning of "Coptic" and "Orthodox"</h2>
+                    <img src={Church} alt="Coptic Church" className="inline-image" style={{width:"30%"}}/>
                     <p>
-                        <img src={Church} alt="Coptic Church" className="inline-image" style={{width:"50%"}}/>
                         The term <em>“Coptic”</em> derives from the Greek word <em>Aigyptos</em>, meaning “Egyptian.”
                         Following the Arab conquest of Egypt in the seventh century, the Arabic term <em>qibt</em> was
                         used to refer to both Egyptians and Christians, reflecting the deep connection between faith and identity.
@@ -76,8 +73,8 @@ const CopticChurch: React.FC = () => (
             <div className="about-sec">
                 <div className="about-text">
                     <h2>Core Beliefs</h2>
+                    <img src={Trinity} alt="Holy Trinity" className="inline-image" style={{width:"30%"}}/>
                     <p>
-                        <img src={Trinity} alt="Holy Trinity" className="inline-image" style={{width:"30%"}}/>
                         The Coptic Orthodox Church worships the Holy Trinity—Father, Son, and Holy Spirit—as One God in
                         the unity of divine nature.
                         We confess one God in three co-equal, co-essential, and co-indwelling
@@ -90,7 +87,6 @@ const CopticChurch: React.FC = () => (
                         teaching.
                     </p>
                 </div>
-
             </div>
 
             <div className="about-sec">
