@@ -44,7 +44,7 @@ const Slideshow: React.FC<SlideshowBackgroundProps> = ({
 
             {/* Example overlay content */}
             <div className="overlay-content">
-                <h1>Archangel Michael American Coptic Orthodox Church</h1>
+                <h2>Archangel Michael<br/> American Coptic Orthodox Church</h2>
                 <h2>ϯⲉⲕⲕ̀ⲗⲏⲥⲓⲁ ⲛ̀ⲟⲣⲑⲟⲇⲟⲝⲟⲥ ⲛ̀ⲣⲉⲙⲛ̀ⲭⲏⲙⲓ ⲛ̀ⲧⲉ ⲡⲓⲁ̀ⲣⲭⲏⲁⲅⲅⲉⲗⲟⲥ ⲉⲑⲟⲩⲁⲃ ⲙⲓⲭⲁⲏⲗ</h2>
             </div>
         </div>
