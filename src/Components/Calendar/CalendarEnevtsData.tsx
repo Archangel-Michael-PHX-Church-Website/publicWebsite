@@ -1,12 +1,12 @@
 import Bible from '../../Assets/Images/Calendar/BibleStudy.png'
-import Prayer from "../../Assets/Images/Calendar/pray.jpg"
-import Divine from "../../Assets/Images/Calendar/divine.jpeg"
-import Education from "../../Assets/Images/Calendar/education.jpeg"
-import Grad from "../../Assets/Images/Calendar/grad.jpeg"
-import Youth from "../../Assets/Images/Calendar/youth.jpg"
-import Kids from "../../Assets/Images/Calendar/Kids.jpg"
-import Confess from "../../Assets/Images/Calendar/confess.jpeg"
-import Default  from "../../Assets/Images/Calendar/default.jpg"
+import Prayer from "../../Assets/Images/Calendar/pray.png"
+import Divine from "../../Assets/Images/Calendar/divine.png"
+import Education from "../../Assets/Images/Calendar/education.png"
+import Grad from "../../Assets/Images/Calendar/grad.png"
+import Youth from "../../Assets/Images/Calendar/youth.png"
+import Kids from "../../Assets/Images/Calendar/Kids.png"
+import Confess from "../../Assets/Images/Calendar/confess.png"
+import Default  from "../../Assets/Images/Calendar/default.png"
 
 export interface CalendarEvent {
     id: string;
