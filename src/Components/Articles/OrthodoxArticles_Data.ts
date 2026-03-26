@@ -1,7 +1,7 @@
-import Eucharist from "../../Assets/Images/Articles/Eucharist.jpg"
+import Eucharist from "../../Assets/Images/Articles/Eucharist.png"
 import Icons from "../../Assets/Images/Articles/Icons.png"
 import Intercession from "../../Assets/Images/Articles/Saints.png"
-import Priest from "../../Assets/Images/Articles/priesthood.jpg"
+import Priest from "../../Assets/Images/Articles/priesthood.png"
 import Sacraments from "../../Assets/Images/Articles/Sacraments.png";
 import Traditions from "../../Assets/Images/Articles/apostles.png";
 
