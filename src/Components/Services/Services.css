@@ -164,6 +164,6 @@
     }
 
     .back-overlay p {
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 4;
     }
 }
