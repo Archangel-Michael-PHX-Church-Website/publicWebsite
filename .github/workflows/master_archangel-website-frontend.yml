@@ -58,3 +58,4 @@ jobs:
           app-name: 'archangel-website-frontend'
           slot-name: 'Production'
           package: build
+
