@@ -32,11 +32,11 @@ export default function GoToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    if (!visible) return null;
+
     return (
-        visible && (
-            <div className="go-top-icon" style={{ bottom: offset }} onClick={scrollToTop}>
-                <FaArrowUp size={22} />
-            </div>
-        )
+        <div className="go-top-icon" style={{ bottom: offset }} onClick={scrollToTop}>
+            <FaArrowUp size={22} />
+        </div>
     );
 }
