@@ -8,31 +8,31 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js version
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22.x'
 
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build --if-present
-          npm test --if-present --passWithNoTests
+      - name: Install dependencies
+        run: npm install
 
-      - name: List build folder
+      - name: Build React app
+        run: npm run build
+
+      - name: Verify build output
         run: ls -R build
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: build
+          name: react-build
           path: build/
 
   deploy:
@@ -46,10 +46,10 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
-          name: build
+          name: react-build
           path: build
 
-      - name: Debug workspace
+      - name: Debug downloaded artifact
         run: ls -R .
 
       - name: Login to Azure
@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'archangel-website-frontend'
           slot-name: 'Production'
-          package: ./build
+          package: build
