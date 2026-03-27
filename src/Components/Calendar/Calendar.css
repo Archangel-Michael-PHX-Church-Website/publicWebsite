@@ -84,6 +84,15 @@
 .event-bible         { background-color: #4e3f30 !important; }
 .event-kids       { background-color: rgba(255, 98, 0, 0.79) !important; }
 .event-confession { background-color: rgba(70, 67, 67, 0.67) !important; }
+.event-palm        { background-color: #0b4f09 !important; }
+.event-monday        { background-color: #010300 !important; }
+.event-tuesday       { background-color: #010300 !important; }
+.event-wednesday     { background-color: #010300 !important; }
+.event-thursday    { background-color: #010300 !important; }
+.event-friday     { background-color: #010300 !important; }
+.event-saturday     { background-color: #9dbbf8 !important; }
+.event-resurrection    { background-color: #a91a3b !important; }
+.event-baptism    { background-color: #0082ff !important; }
 .event-default       { background-color: #e8dcc2 !important; }
 
 /* Modal overlay */
