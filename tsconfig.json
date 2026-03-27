@@ -25,7 +25,7 @@
   ],
 
   "compilerOptions": {
-    "jsx": "react", // or "react" for older versions
+    "jsx": "react-jsx", // or "react" for older versions
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
