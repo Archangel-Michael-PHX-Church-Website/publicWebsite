@@ -46,7 +46,7 @@ export const services = [
 
     {
         image: men,
-        text: "Men's fellowship is the 3rd Thursday of each month"
+        text: "Men's fellowship is the 4th Thursday of each month"
     },
     {
         image: women,
